@@ -19,6 +19,8 @@
   "dependencies": {
     "chai": "^4.2.0",
     "fantasy-land": "^4.0.1",
-    "mocha": "^6.1.4"
+    "jsverify": "^0.8.4",
+    "mocha": "^6.1.4",
+    "sanctuary-show": "^1.0.0"
   }
 }
