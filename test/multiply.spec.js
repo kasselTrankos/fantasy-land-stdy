@@ -13,12 +13,18 @@ const Arb = arb =>
 const MultiplyArb = jsc.number.smap(Multiply, multiply => multiply.value, show);
 const {leftIdentity, rightIdentity} = laws.Monoid(Z.equals, Multiply);
 const {associativity} = laws.Semigroup(Z.equals, Multiply);
-// console.log(laws.Semigroup(Z.equals, Multiply))
+const {leftInverse, rightInverse} =laws.Group(Z.equals, Multiply);
+// console.log(laws.Group(Z.equals, Multiply))
 const testRightIdentity = rightIdentity (MultiplyArb);
 const testLeftIdentity = leftIdentity (MultiplyArb);
-const testAssociativity = associativity (Arb(jsc.number), Arb(jsc.number), Arb(jsc.number));
+const testLeftInverse = leftInverse (MultiplyArb);
+const testRightInverse = rightInverse (MultiplyArb);
+
+const testAssociativity = associativity (MultiplyArb, MultiplyArb, MultiplyArb);
 describe('Multiply => ',  () => {
   it('testRightIdentity', testRightIdentity);
   it('testLeftIdentity', testLeftIdentity);
   it('testAssociativity', testAssociativity);
+  it('testLeftInverse', testLeftInverse);
+  it('testRightInverse', testRightInverse);
 });
