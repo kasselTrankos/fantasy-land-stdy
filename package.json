@@ -18,12 +18,14 @@
   "homepage": "https://github.com/kasselTrankos/fantasy-land-stdy#readme",
   "dependencies": {
     "chai": "^4.2.0",
+    "fantasy-check": "^0.3.2",
     "fantasy-land": "^4.0.1",
     "fantasy-laws": "^1.2.0",
     "jsverify": "^0.8.4",
     "lodash": "^4.17.11",
     "mocha": "^6.1.4",
     "sanctuary-show": "^1.0.0",
-    "sanctuary-type-classes": "^11.0.0"
+    "sanctuary-type-classes": "^11.0.0",
+    "tagged": "^0.1.0"
   }
 }
