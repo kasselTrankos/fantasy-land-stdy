@@ -10,8 +10,8 @@ Multiplicity[empty] = () => Multiplicity(1);
 Multiplicity.prototype[equals] = function(y) {
   return this.value === y.value;
 };
-Multiplicity.prototype[concat] = function(y) {
-  return Multiplicity(this.value * y.value);
+Multiplicity.prototype[concat] = function(that) {
+  return Multiplicity(this.value * that.value);
 };
 Multiplicity.prototype[invert] = function() {
   return Multiplicity(1/this.value);
