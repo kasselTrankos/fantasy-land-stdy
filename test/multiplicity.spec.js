@@ -8,8 +8,8 @@ const Z = require ('sanctuary-type-classes');
 const Multiplicity = require('./../Multiplicity'); 
 
 const MultiplyArb = jsc.integer.smap(Multiplicity, multiply => multiply.value, show);
-const {leftIdentity, rightIdentity} = laws.Monoid(Z.equals, Multiplicity);
 const {associativity} = laws.Semigroup(Z.equals, Multiplicity);
+const {leftIdentity, rightIdentity} = laws.Monoid(Z.equals, Multiplicity);
 const testAssociativity = associativity (MultiplyArb, MultiplyArb, MultiplyArb);
 const testRightIdentity = rightIdentity (MultiplyArb);
 const testLeftIdentity = leftIdentity (MultiplyArb);
