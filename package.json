@@ -25,6 +25,7 @@
     "jsverify": "^0.8.4",
     "lodash": "^4.17.11",
     "mocha": "^6.1.4",
+    "ramda": "^0.26.1",
     "sanctuary-show": "^1.0.0",
     "sanctuary-type-classes": "^11.0.0",
     "tagged": "^0.1.0"
