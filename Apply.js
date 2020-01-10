@@ -24,13 +24,19 @@ Alt.prototype[alt] = Alt.prototype.alt = function(alt) {
     });
 }
 const Maybe = taggedSum('Maybe' ,{ Just: ['x'], Nothing: [] })
-Maybe.prototype.alt = function(alt) {
+Maybe.prototype[alt] = Maybe.prototype.alt = function(alt) {
     console.log('ALTERMN', alt);
-    this.cata({
+    return this.cata({
         Just: _ => this,
-        Nothing: alt
+        Nothing:() => alt
     });
 }
+Maybe.prototype[map] = Maybe.prototype.map = function (f) {
+    return this.cata({
+      Just: x => Maybe.Just(f(x)),
+      Nothing: () => Maybe.Nothing,
+    })
+  }
 
 
 module.exports = {Apply, Alt, Maybe};

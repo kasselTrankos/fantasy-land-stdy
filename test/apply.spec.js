@@ -9,7 +9,7 @@ describe('Maybe', ()=> {
     const {Nothing, Just} = Maybe;
     // const c = Alt.of(10);
     // console.log(Alt(undefined).alt(c))
-    console.log(Just(3), Nothing, '11111');
+    console.log(Just(3), Nothing, '11111', Nothing.alt(Nothing).alt(Just(2)ç));
   });
 });
 // describe('Apply => ',  () => {
