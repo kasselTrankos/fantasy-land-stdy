@@ -20,8 +20,17 @@ Alt.prototype[of] = Alt.prototype.of = function(b) {
 Alt.prototype[alt] = Alt.prototype.alt = function(alt) {
     return this.cata({
         Just: _ => this,
-        Nothing: (alt) => alt
+        Nothing: alt
+    });
+}
+const Maybe = taggedSum('Maybe' ,{ Just: ['x'], Nothing: [] })
+Maybe.prototype.alt = function(alt) {
+    console.log('ALTERMN', alt);
+    this.cata({
+        Just: _ => this,
+        Nothing: alt
     });
 }
 
-module.exports = {Apply};
+
+module.exports = {Apply, Alt, Maybe};

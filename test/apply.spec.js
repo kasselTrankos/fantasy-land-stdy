@@ -3,11 +3,13 @@ const FL = require('fantasy-land');
 const {map} = require('ramda');
 const Z = require ('sanctuary-type-classes');
 
-const {Apply, Alt} = require('./../Apply'); 
-describe('Alt', ()=> {
-  it('uuuuuu', ()=> {
-    // const c = Alt(10);
+const {Apply, Alt, Maybe} = require('./../Apply'); 
+describe('Maybe', ()=> {
+  it('maybeeee', ()=> {
+    const {Nothing, Just} = Maybe;
+    // const c = Alt.of(10);
     // console.log(Alt(undefined).alt(c))
+    console.log(Just(3), Nothing, '11111');
   });
 });
 // describe('Apply => ',  () => {
