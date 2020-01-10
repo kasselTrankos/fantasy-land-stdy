@@ -1,20 +1,20 @@
 'use strict';
 const {empty, of, concat, equals, invert} = require('fantasy-land');
 const {tagged} = require('daggy');
-const  Multiply = tagged('value');
+const  Sum = tagged('Sum', ['value']);
 
 
-Multiply[of] = value => Multiply(value);
-Multiply[empty] = () => Multiply(0);
+Sum[of] = value => Sum(value);
+Sum[empty] = () => Sum(0);
 
-Multiply.prototype[equals] = function(y) {
+Sum.prototype[equals] = function(y) {
   return this.value === y.value;
 };
-Multiply.prototype[concat] = function(y) {
-  return Multiply(this.value + y.value);
+Sum.prototype[concat] = function(y) {
+  return Sum(this.value + y.value);
 };
-Multiply.prototype[invert] = function() {
-  return Multiply(-this.value);
+Sum.prototype[invert] = function() {
+  return Sum(-this.value);
 };
 
-module.exports = Multiply;
+module.exports = Sum;

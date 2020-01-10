@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kasselTrankos/fantasy-land-stdy#readme",
   "dependencies": {
     "chai": "^4.2.0",
+    "daggy": "^1.4.0",
     "fantasy-check": "^0.3.2",
     "fantasy-combinators": "0.0.1",
     "fantasy-land": "^4.0.1",

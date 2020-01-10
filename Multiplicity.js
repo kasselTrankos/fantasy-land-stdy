@@ -1,7 +1,7 @@
 'use strict';
 const {empty, of, concat, equals, invert} = require('fantasy-land');
 const {tagged} = require('daggy');
-const  Multiplicity = tagged('value');
+const  Multiplicity = tagged('Multiplicity', ['value']);
 
 
 Multiplicity[of] = value => Multiplicity(value);
