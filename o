@@ -1,0 +1,50 @@
+
+> fantasy-land-stdy@1.0.0 test /Users/aotn/Documents/fp/fantasy-land-stdy
+> mocha
+
+
+
+  Maybe
+ALTERMN { is: [Function: $sum$isUnit] }
+ALTERMN { x: 2 }
+{ x: 3 } { is: [Function: $sum$isUnit] } '11111' { x: 2 }
+{ x: { n: 0, k: 99 } }
+
+    ✓ maybeeee
+
+  Functor => 
+    ✓ testIdentity
+    ✓ testComposition
+
+  Future
+{ first: 1,
+  rest: { first: 2, rest: { first: 3, rest: [Object] } } } '111111'
+{ first: 2, rest: { first: 3, rest: { first: 4, rest: null } } } '111111'
+{ first: 3, rest: { first: 4, rest: null } } '111111'
+ estamos al final null
+false '22222'
+{ first: 2,
+  rest: { first: 3, rest: { first: 4, rest: [Circular] } } } '444444'
+{ first: 3, rest: { first: 4, rest: [Circular] } } '444444'
+{ first: 4, rest: { first: 3, rest: [Circular] } } '444444'
+{ first: 3, rest: { first: 4, rest: [Circular] } } '444444'
+true '777777'
+    ✓ tortoise and hare -> turltle and rabbit
+90055 '00000'
+    ✓ arrrgg basic promise thgidb
+
+  Multiplicity => 
+    ✓ testRightIdentity
+    ✓ testLeftIdentity
+    ✓ testAssociativity
+
+  Sum => 
+    ✓ testRightIdentity
+    ✓ testLeftIdentity
+    ✓ testAssociativity
+    ✓ testLeftInverse
+    ✓ testRightInverse
+
+
+  13 passing (48ms)
+

@@ -7,10 +7,14 @@ const {Apply, Alt, Maybe} = require('./../Apply');
 describe('Maybe', ()=> {
   it('maybeeee', ()=> {
     const {Nothing, Just} = Maybe;
+    const prop = o => key =>  o[key] ? Just(o[key]) : Nothing;
+    const gg = {a: 1, b: { n: 0, k: 99}};
+
     // const c = Alt.of(10);
     // console.log(Alt(undefined).alt(c))
     console.log(Just(3), Nothing, '11111', Nothing.alt(Nothing).alt(Just(2)));
-    console.log(Nothing.alt(Just(9000)))
+    console.log(prop(gg)('b'))
+    console.log();
   });
 });
 // describe('Apply => ',  () => {
