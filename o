@@ -17,18 +17,10 @@ ALTERMN { x: 2 }
     ✓ testComposition
 
   Future
-{ first: 1,
-  rest: { first: 2, rest: { first: 3, rest: [Object] } } } '111111'
-{ first: 2, rest: { first: 3, rest: { first: 4, rest: null } } } '111111'
-{ first: 3, rest: { first: 4, rest: null } } '111111'
- estamos al final null
-false '22222'
-{ first: 2,
-  rest: { first: 3, rest: { first: 4, rest: [Circular] } } } '444444'
-{ first: 3, rest: { first: 4, rest: [Circular] } } '444444'
-{ first: 4, rest: { first: 3, rest: [Circular] } } '444444'
-{ first: 3, rest: { first: 4, rest: [Circular] } } '444444'
-true '777777'
+: 8 00000 11  V:  dos x => y => x x => x 1111111
+trash 2
+factorial(3) 6
+Symbol function Symbol() { [native code] }
     ✓ tortoise and hare -> turltle and rabbit
 90055 '00000'
     ✓ arrrgg basic promise thgidb
@@ -46,5 +38,5 @@ true '777777'
     ✓ testRightInverse
 
 
-  13 passing (48ms)
+  13 passing (50ms)
 
